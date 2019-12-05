@@ -1,6 +1,7 @@
 dist: bionic
 script:
 - echo $TRAVIS_TAG
+- echo $TRAVIS_COMMIT
 deploy:
   provider: releases
   api_key:
