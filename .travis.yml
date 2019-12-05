@@ -2,11 +2,12 @@ dist: bionic
 script:
 - echo $TRAVIS_TAG
 - echo $TRAVIS_COMMIT
-- export TRAVIS_TAG=${TRAVIS_TAG:-$project_version-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)};
+- export TRAVIS_TAG=${РПЗ-$(date +'%H:%M:%S %d.%m.%Y')};
 - echo $TRAVIS_TAG
 deploy:
   provider: releases
   api_key:
     secure: R+uSdUNKUjn8T85BoEhW2vkXn+/KgsftubZLKKuc6YFb7oepsltExbVMIIIdf8RjHzfOcvxtKgy5KFxxa4ny50qYF58QVhc/W2jm6LeDD5uHstt3kiO1MgJnqyZrPn9rveyROofJQUQJCos9zHpg8sAYud0sQiKbTOdhtkxLb+yj8dKVewNWefU4nWOJFtqzOPX79ha6yhwzmdle51+VuJOUQvavZ9ta334adkYO78Zw0QI4Z0NcqJPxHQgklJLQUwTkv35DFk2JrP5OgS79tITM0uq+3j+3QYbpa+7PfGvTafWyLArhSU/qMHiQHIgdL5sJDOC3KhV27OQTHzsfCyx4F4+eFjm3Ynr3uB2Nq92KFvvU9k4LvHMmxShnqq3gtXJYnl7QMcioAnc73jg5lLwo9jHN94NtRHyzNRJbOvFbJ2wp2KzWKVHDYWLLBLjwjeCfZ30W0bBsll89qSzk4ZVy/xB4xS4UHlNCeaq5whunmN8vwJyXEKtqHJAqVvIUsHnfdYn8w9928aLR2XCGc1r0y+HGe+yN08wqVvWTadiHjjyMt2xEmydpg5qSDN8nmY+GxHyWNX98oFJtmKSXWz+DYjlwMGir+315bzyd9pRTX4oa3Avu97HP44auBo+Se+Ka50Es4kDuL5XBhiR8AaYI4+o7GLvL91o9X2Awcek=
   on:
+    branch: master
     repo: CatInCosmicSpace/travis-tag-test
