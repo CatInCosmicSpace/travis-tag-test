@@ -2,7 +2,7 @@ dist: bionic
 script:
 - echo $TRAVIS_TAG
 - echo $TRAVIS_COMMIT
-- export TRAVIS_TAG=${РПЗ-$(date +'%H:%M:%S %d.%m.%Y')};
+- export TRAVIS_TAG="РПЗ от "$(date +'%H:%M:%S %d.%m.%Y');
 - echo $TRAVIS_TAG
 deploy:
   provider: releases
