@@ -1,4 +1,6 @@
 dist: bionic
+script:
+- echo $TRAVIS_TAG
 deploy:
   provider: releases
   skip_cleanup: true
